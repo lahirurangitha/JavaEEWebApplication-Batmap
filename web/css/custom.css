@@ -1,0 +1,10 @@
+.backgroundImg{
+    background-image: url("../img/bg-img.jpg");
+    background-repeat: round;
+    min-width: 100%;
+    min-height: 550px;
+    margin: 0px;
+}
+.gap{
+    margin: 10px;
+}

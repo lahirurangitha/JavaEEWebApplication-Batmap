@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="JavaEEWebApplication-Batmap:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaEEWebApplication_Batmap_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="JavaEEWebApplication-Batmap/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JavaEEWebApplication-Batmap" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
