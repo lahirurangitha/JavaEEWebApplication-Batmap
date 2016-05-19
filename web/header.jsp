@@ -15,7 +15,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="index.jsp"><img id="img" src="img/logo.png" width="100px"></a>
+      <a href="index.jsp"><img id="img" src="img/logo.png" height="50px"></a>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
