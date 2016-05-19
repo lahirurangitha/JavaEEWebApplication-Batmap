@@ -1,3 +1,6 @@
+<%@ page import="com.group.model.User" %>
+<%@ page import="java.sql.SQLException" %>
+<%@ page import="com.group.controller.UserController" %>
 <%--
   Created by IntelliJ IDEA.
   User: lahiru
@@ -15,6 +18,16 @@
   <%@include file="header.jsp"%>
   <div class="container-fluid backgroundImg">
 
+    <%
+      String name = null;
+      try {
+        name = UserController.getDetails();
+      } catch (ClassNotFoundException | SQLException e) {
+        e.printStackTrace();
+      }
+
+    %>
+    <h1><%=name%></h1>
   </div>
   <%@include file="footer.jsp"%>
   </body>
