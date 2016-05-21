@@ -19,15 +19,18 @@
   <div class="container-fluid backgroundImg">
 
     <%
-      String name = null;
-      try {
-        name = UserController.getDetails();
-      } catch (ClassNotFoundException | SQLException e) {
-        e.printStackTrace();
-      }
+//      String name = null;
+//      try {
+//        name = UserController.getDetails();
+//      } catch (ClassNotFoundException e) {
+//        e.printStackTrace();
+//      } catch (SQLException e) {
+//        e.printStackTrace();
+//      }
+
 
     %>
-    <h1><%=name%></h1>
+    <%--<h1><%=name%></h1>--%>
   </div>
   <%@include file="footer.jsp"%>
   </body>
