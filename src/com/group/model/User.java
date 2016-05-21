@@ -1,15 +1,17 @@
 package com.group.model;
 
-import com.group.db.DBConnection;
+
 /**
  * Created by lahiru on 5/18/2016.
  */
 public class User {
+
+    private int uid;
     private String username;
     private String password;
+    private String utype;
 
     public User(){
-
     }
 
     public User(String username, String password) {
@@ -33,11 +35,29 @@ public class User {
         this.password = password;
     }
 
-    @Override
+
     public String toString() {
         return "User{" +
-                "username='" + username + '\'' +
+                "uid=" + uid +
+                ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", utype='" + utype + '\'' +
                 '}';
+    }
+
+    public int getUid() {
+        return uid;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
+
+    public String getUtype() {
+        return utype;
+    }
+
+    public void setUtype(String utype) {
+        this.utype = utype;
     }
 }
