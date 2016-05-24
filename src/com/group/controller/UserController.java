@@ -13,7 +13,8 @@ public class UserController {
         String str;
         DBConnection mydb = DBConnection.getDbCon();
         if(mydb!=null){
-            ResultSet rs = mydb.query("SELECT * FROM user WHERE uid = 2");
+            String [] parms={};
+            ResultSet rs = mydb.query("SELECT * FROM user WHERE uid = 1",parms);
             if(rs.next()){
                 str = rs.getString("username");
             }else {
