@@ -15,7 +15,7 @@ public final class DBConnection {
         String dbName = "batmap_db";
         String driver = "com.mysql.jdbc.Driver";
         String userName = "root";
-        String password = "lahiru";
+        String password = "";
         try {
             Class.forName(driver).newInstance();
             this.conn = DriverManager.getConnection(url+dbName,userName,password);
@@ -56,12 +56,17 @@ public final class DBConnection {
      * @return boolean
      * @throws SQLException
      */
-//    public int insert(String insertQuery) throws SQLException {
-//        statement = db.conn.createStatement();
-//        int result = statement.executeUpdate(insertQuery);
-//        return result;
-//
-//    }
+    public int insert(String insertQuery, String[] parms) throws SQLException {
+        statement = db.conn.prepareStatement(insertQuery);
+        if(parms.length!=0){
+            for(int i=0;i<parms.length;i++){
+                statement.setString(i+1,parms[i]);
+            }
+        }
+        int result = statement.executeUpdate();
+        return result;
+
+    }
 
 }
 

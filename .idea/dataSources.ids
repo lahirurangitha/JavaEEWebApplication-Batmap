@@ -11,6 +11,7 @@
       <column name="uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="username" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
       <column name="password" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="utype" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="uid"/>
     </table>
   </data-source>

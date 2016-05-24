@@ -1,6 +1,5 @@
 package com.group.servlets;
 
-import com.group.controller.LoginController;
 import com.group.db.DBConnection;
 import com.group.model.User;
 
@@ -24,11 +23,11 @@ public class LoginForm extends HttpServlet{
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         // error feedback message
-        String error = "";
+//        String error = "";
         if (username.equals("") || password.equals("")) {
             // fields are empty
-            error += "Empty Fields!";
-            resp.sendRedirect("login.jsp?msg=" + error);
+//            error += "";
+            resp.sendRedirect("login.jsp?emptyFields=Empty Fields.");
         }else{
             // checks for a valid user
             DBConnection loginDB = DBConnection.getDbCon();
@@ -53,7 +52,7 @@ public class LoginForm extends HttpServlet{
                     }
                 }else {
                     // if errors found redirected back to the log in page
-                    resp.sendRedirect("index.jsp?msg=" + error);
+                    resp.sendRedirect("login.jsp?invalidCred=User does not exist.");
                 }
 
             } catch (SQLException e) {

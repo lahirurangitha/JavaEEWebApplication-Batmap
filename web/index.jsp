@@ -1,6 +1,3 @@
-<%@ page import="com.group.model.User" %>
-<%@ page import="java.sql.SQLException" %>
-<%@ page import="com.group.controller.UserController" %>
 <%--
   Created by IntelliJ IDEA.
   User: lahiru
